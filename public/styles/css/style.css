@@ -216,9 +216,10 @@ section.chat div.chat-display {
   section.chat div.chat-display ul {
     height: 84.5%; }
   section.chat div.chat-display form textarea {
-    width: 83%; }
+    width: 83%;
+    margin-right: -5px; }
   section.chat div.chat-display form input {
-    width: 5.25em;
+    width: 5.57em;
     height: 2.75em; }
 
 

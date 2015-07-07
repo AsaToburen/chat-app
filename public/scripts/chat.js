@@ -28,6 +28,13 @@
         textarea.value = "";
     });
 
+    socket.on('receive', function(data) {
+
+        createMessage(data.msg);
+        //scrollToBottom();
+
+    });
+
 
     function createMessage(msg) {
 
