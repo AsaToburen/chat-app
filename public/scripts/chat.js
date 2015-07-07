@@ -9,39 +9,69 @@
         });
     });
 
+    var userData = {
+        name: ''
+    };
+
+    var userInfoForm = document.getElementById('userInfo');
     var msgForm = document.getElementById('msgForm');
     var messageList = document.getElementById('messages');
 
 
+    //get users name and clear input after submitted
+
+    userInfoForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        var nameInput = document.getElementById('userName');
+        userData.name = nameInput.value;
+        nameInput.value = '';
+    });
+
+    //listen for users submitting a message
 
     msgForm.addEventListener('submit', function(e) {
+        
         e.preventDefault();
 
         var textarea = document.getElementById('message');
 
-        createMessage(textarea.value);
+        createMessage(textarea.value, userData.name);
 
-        socket.emit('msg', {
+        socket.emit('msg', 'name', {
+            name: userData.name,
             msg: textarea.value
         });
 
         textarea.value = "";
     });
 
+
+    //when data is recieved create message
+
     socket.on('receive', function(data) {
 
-        createMessage(data.msg);
-        //scrollToBottom();
+        createMessage(data.msg, data.name);
 
     });
 
 
-    function createMessage(msg) {
+    function createMessage(msg, name) {
 
-        var li = document.createElement('li');
-        var liText = document.createTextNode(msg);
-        li.appendChild(liText);
-        messageList.appendChild(li);
+        var msgContent = document.createElement('li');
+        var msgName = document.createElement('h2');
+        var msgText = document.createElement('p');
+
+        var newName = document.createTextNode(name);
+        var newText = document.createTextNode(msg);
+
+        msgName.appendChild(newName);
+        msgText.appendChild(newText);
+
+        msgContent.appendChild(msgName);
+        msgContent.appendChild(msgText);
+
+        messageList.appendChild(msgContent);
     }
 
 })();

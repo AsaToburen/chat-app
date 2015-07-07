@@ -31,16 +31,16 @@ section.chat {
         background-color: #fff;
         ul {
             height: 84.5%;
+            list-style-type: none;
         }
         form {
-          
             textarea {
                 width: 83%;
                 margin-right: -5px;
             }
             input {
-                  width: 5.57em;
-                  height: 2.75em;
+                width: 5.57em;
+                height: 2.75em;
             }
         }
     }

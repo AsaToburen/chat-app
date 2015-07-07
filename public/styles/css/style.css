@@ -214,7 +214,8 @@ section.chat div.chat-display {
   height: 30em;
   background-color: #fff; }
   section.chat div.chat-display ul {
-    height: 84.5%; }
+    height: 84.5%;
+    list-style-type: none; }
   section.chat div.chat-display form textarea {
     width: 83%;
     margin-right: -5px; }
