@@ -1,44 +1,40 @@
+(function() {
 
-(function(){
+    var socket = io();
 
-var socket = io();
-
-socket.on('connect', function() {
-    socket.emit('load');
-});
-
-var msgForm = document.getElementById('msgForm');
-var messageList = document.getElementById('messages');
-var textarea = document.getElementById('message');
-
-
-msgForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    console.log('submitted');
-
-    createChatMessage(textarea.value);
-
-    socket.emit('msg', {
-        msg: textarea.value
+    socket.on('connect', function() {
+        console.log('a user connected');
+        socket.on('disconnect', function() {
+            console.log('user disconnected');
+        });
     });
 
-    textarea.value = "";
-});
+    var msgForm = document.getElementById('msgForm');
+    var messageList = document.getElementById('messages');
 
 
-function createChatMessage(msg) {
 
-    var who = '';
+    msgForm.addEventListener('submit', function(e) {
+        e.preventDefault();
 
-    var li = document.createElement('li');
-    var liText = document.createTextNode(msg);
-    li.appendChild(liText);
+        var textarea = document.getElementById('message');
+
+        createMessage(textarea.value);
+
+        socket.emit('msg', {
+            msg: textarea.value
+        });
+
+        textarea.value = "";
+    });
 
 
-    console.log(li);
-    messageList.appendChild(li);
+    function createMessage(msg) {
 
-}
+        var li = document.createElement('li');
+        var liText = document.createTextNode(msg);
+        li.appendChild(liText);
+        messageList.appendChild(li);
+    }
 
 })();
