@@ -31,14 +31,14 @@
     //listen for users submitting a message
 
     msgForm.addEventListener('submit', function(e) {
-        
+
         e.preventDefault();
 
         var textarea = document.getElementById('message');
 
         createMessage(textarea.value, userData.name);
 
-        socket.emit('msg', 'name', {
+        socket.emit('msg', {
             name: userData.name,
             msg: textarea.value
         });
@@ -50,19 +50,19 @@
     //when data is recieved create message
 
     socket.on('receive', function(data) {
-
+        console.log(data);
         createMessage(data.msg, data.name);
 
     });
 
 
-    function createMessage(msg, name) {
+    function createMessage(msg, userName) {
 
         var msgContent = document.createElement('li');
         var msgName = document.createElement('h2');
         var msgText = document.createElement('p');
 
-        var newName = document.createTextNode(name);
+        var newName = document.createTextNode(userName);
         var newText = document.createTextNode(msg);
 
         msgName.appendChild(newName);
