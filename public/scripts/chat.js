@@ -38,10 +38,9 @@
 
         createMessage(textarea.value, userData.name);
 
-        socket.emit('msg', {
-            name: userData.name,
-            msg: textarea.value
-        });
+         var newMsg = {user: userData.name, msg: textarea.value};
+
+        socket.emit('msg', newMsg);
 
         textarea.value = "";
     });
@@ -50,8 +49,8 @@
     //when data is recieved create message
 
     socket.on('receive', function(data) {
-        console.log(data);
-        createMessage(data.msg, data.name);
+
+        createMessage(data.msg, data.user);
 
     });
 
