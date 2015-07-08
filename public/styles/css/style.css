@@ -189,7 +189,8 @@ input[type="checkbox"], input[type="radio"] {
   padding: 0; }
 
 html {
-  background-color: #dfdfdf; }
+  background-color: #dfdfdf;
+  background-image: url("../../images/school.png"); }
 
 header {
   text-align: center; }
@@ -207,20 +208,102 @@ section.main {
     font-size: 1.5em;
     margin: 0 auto; }
 
-section.chat div.chat-display {
-  margin: 2em auto;
-  border: 2px solid grey;
-  width: 35em;
-  height: 30em;
-  background-color: #fff; }
-  section.chat div.chat-display ul {
-    height: 84.5%;
-    list-style-type: none; }
-  section.chat div.chat-display form textarea {
-    width: 83%;
-    margin-right: -5px; }
-  section.chat div.chat-display form input {
-    width: 5.57em;
-    height: 2.75em; }
+section.login {
+  height: 54em; }
+  section.login form {
+    background-color: #fff;
+    margin: 8.5em auto;
+    width: 30%;
+    border: 2px solid #000;
+    height: 27em;
+    padding: 3em; }
+    section.login form label {
+      display: block;
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 1em; }
+    section.login form input {
+      font-size: 2em;
+      margin-right: 1em;
+      margin: 1em auto;
+      width: 12em;
+      display: block;
+      text-align: center;
+      height: 1.5em; }
+    section.login form i {
+      font-size: 5em;
+      color: #444444; }
+    section.login form button#userUpload {
+      display: block;
+      width: 9em;
+      margin: 1.5em auto;
+      border-radius: 3em;
+      height: 5.5em; }
+    section.login form button {
+      display: block;
+      margin: 1.5em auto; }
+    section.login form input[type="submit"] {
+      display: block;
+      margin-top: 1.5em;
+      width: 5em;
+      color: #fff;
+      height: 2em;
+      background-color: #4285F4; }
+
+section.chat {
+  border: 2px solid blue;
+  height: 65em;
+  display: none; }
+  section.chat aside {
+    display: inline-block;
+    margin: 10em 10em 20em 15em;
+    vertical-align: top; }
+  section.chat div.chat-display {
+    display: inline-block;
+    margin: 8.5em auto 0;
+    border: 2px solid grey;
+    width: 40em;
+    height: 38em;
+    background-color: #fff; }
+    section.chat div.chat-display ul {
+      height: auto;
+      vertical-align: bottom;
+      list-style-type: none;
+      padding: 1.5em;
+      margin-top: 0;
+      margin: 0; }
+      section.chat div.chat-display ul h2 {
+        font-size: 1.3em;
+        padding: .5em 0;
+        margin: 0; }
+      section.chat div.chat-display ul li {
+        margin: 1em 0; }
+      section.chat div.chat-display ul li.user {
+        background-color: #fafafa;
+        text-align: right;
+        border-radius: .5em;
+        padding: .1em 1em; }
+        section.chat div.chat-display ul li.user img {
+          float: right; }
+        section.chat div.chat-display ul li.user h2 {
+          vertical-align: bottom;
+          clear: both; }
+        section.chat div.chat-display ul li.user p {
+          padding-left: 2em;
+          margin: 0;
+          padding-top: 2em;
+          text-align: left; }
+      section.chat div.chat-display ul li.other {
+        background-color: #87CEFA; }
+  section.chat form {
+    margin: 2em 0 0 38.4em;
+    width: 43em; }
+    section.chat form textarea {
+      width: 79.5%;
+      margin-right: -5px;
+      height: 3em; }
+    section.chat form input {
+      width: 5.57em;
+      height: 3.4em; }
 
 

@@ -5,28 +5,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Open Chat</title>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="../styles/css/style.css">
 </head>
 
 <body>
-    <section class="login">
+    <section id="login" class="login">
         <form id="userInfo">
+            <label for="userName">Enter a name</label>
             <input type="text" id="userName" placeholder="Your Name">
+            <label for="upload">Upload an avatar or profile picture</label>
+            <!-- <input type="button" id="userUpload"> -->
+            <button type="button" id="userUpload"><i class="ion-ios-cloud-upload"></i></button>
             <input type="submit" id="submit-user">
         </form>
     </section>
-    <section class="chat">
+    <section id="chat" class="chat">
+        <aside id="aside">
+        </aside>
         <div class="chat-display">
             <ul id="messages">
             </ul>
-            <form id="msgForm">
-                <textarea id="message" placeholder="Write something.."></textarea>
-                <input type="submit" id="submit" value="SEND" />
-            </form>
         </div>
+        <form id="msgForm">
+            <textarea id="message" placeholder="Write something.."></textarea>
+            <input type="submit" id="submit" value="SEND" />
+        </form>
     </section>
     <script src="/socket.io/socket.io.js"></script>
     <script src="../scripts/chat.js"></script>
+    <script type="text/javascript" src="//api.filepicker.io/v2/filepicker.js"></script>
 </body>
 
 </html>

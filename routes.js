@@ -20,7 +20,11 @@ module.exports = function(app, io) {
             socket.broadcast.emit('receive', {
                 msg: data.msg,
                 user: data.user,
+                img: data.img
             });
         });
+
+
+        //
     });
 };

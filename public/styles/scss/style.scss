@@ -1,6 +1,7 @@
 @import "normalize.scss";
 html {
     background-color: #dfdfdf;
+    background-image: url('../../images/school.png');
 }
 
 header {
@@ -22,26 +23,122 @@ section.main {
     }
 }
 
+section.login {
+    height: 54em;
+    form {
+        background-color: #fff;
+        margin: 8.5em auto;
+        width: 30%;
+        border: 2px solid #000;
+        height: 27em;
+        padding: 3em;
+        label {
+            display: block;
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 1em;
+        }
+        input {
+            font-size: 2em;
+            margin-right: 1em;
+            margin: 1em auto;
+            width: 12em;
+            display: block;
+            text-align: center;
+            height: 1.5em;
+        }
+        i {
+            font-size: 5em;
+            color: #444444;
+        }
+        button#userUpload {
+            display: block;
+            width: 9em;
+            margin: 1.5em auto;
+            border-radius: 3em;
+            height: 5.5em;
+        }
+        button {
+            display: block;
+            margin: 1.5em auto;
+        }
+        input[type="submit"] {
+            display: block;
+            margin-top: 1.5em;
+            width: 5em;
+            color: #fff;
+            height: 2em;
+            background-color: #4285F4;
+        }
+    }
+}
+
 section.chat {
+    border: 2px solid blue;
+    height: 65em;
+    display: none;
+    aside {
+        display: inline-block;
+        margin: 10em 10em 20em 15em;
+        vertical-align: top;
+    }
     div.chat-display {
-        margin: 2em auto;
+        display: inline-block;
+        margin: 8.5em auto 0;
         border: 2px solid grey;
-        width: 35em;
-        height: 30em;
+        width: 40em;
+        height: 38em;
         background-color: #fff;
         ul {
-            height: 84.5%;
+            height: auto;
+            vertical-align: bottom;
             list-style-type: none;
+            padding: 1.5em;
+            margin-top: 0;
+            margin: 0;
+            h2 {
+                font-size: 1.3em;
+                padding: .5em 0;
+                margin: 0;
+            }
+            li {
+                margin: 1em 0;
+            }
+            li.user {
+                background-color: #fafafa;
+                text-align: right;
+                border-radius: .5em;
+                padding: .1em 1em;
+                img {
+                    float: right;
+                }
+                h2 {
+                    vertical-align: bottom;
+                    clear: both;
+                }
+                p {
+                    padding-left: 2em;
+                    margin: 0;
+                    padding-top: 2em;
+                    text-align: left;
+                }
+            }
+            li.other {
+                background-color: #87CEFA;
+            }
         }
-        form {
-            textarea {
-                width: 83%;
-                margin-right: -5px;
-            }
-            input {
-                width: 5.57em;
-                height: 2.75em;
-            }
+    }
+    form {
+        margin: 2em 0 0 38.4em;
+        width: 43em;
+        textarea {
+            width: 79.5%;
+            margin-right: -5px;
+            height: 3em;
+        }
+        input {
+            width: 5.57em;
+            height: 3.4em;
         }
     }
 }
