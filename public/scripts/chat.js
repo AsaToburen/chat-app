@@ -10,8 +10,8 @@
     });
 
     var userData = {
-        name: 'Greg',
-        img: 'https://www.filepicker.io/api/file/KgICkD9eRDC9ssgK8rpK/convert?crop=0,0,64,64'
+        name: '',
+        img: ''
     };
 
     var otherData = {
