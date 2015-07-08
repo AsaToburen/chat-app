@@ -23,14 +23,16 @@
     <section id="chat" class="chat">
         <aside id="aside">
         </aside>
-        <div class="chat-display">
-            <ul id="messages">
-            </ul>
+        <div class="chat-container">
+            <div class="chat-display">
+                <ul id="messages">
+                </ul>
+            </div>
+            <form id="msgForm">
+                <textarea id="message" placeholder="Write something.."></textarea>
+                <input type="submit" id="submit" value="SEND" />
+            </form>
         </div>
-        <form id="msgForm">
-            <textarea id="message" placeholder="Write something.."></textarea>
-            <input type="submit" id="submit" value="SEND" />
-        </form>
     </section>
     <script src="/socket.io/socket.io.js"></script>
     <script src="../scripts/chat.js"></script>

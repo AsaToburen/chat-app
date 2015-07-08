@@ -82,63 +82,66 @@ section.chat {
         margin: 10em 10em 20em 15em;
         vertical-align: top;
     }
-    div.chat-display {
+    div.chat-container {
         display: inline-block;
-        margin: 8.5em auto 0;
-        border: 2px solid grey;
-        width: 40em;
-        height: 38em;
-        background-color: #fff;
-        ul {
-            height: auto;
-            vertical-align: bottom;
-            list-style-type: none;
-            padding: 1.5em;
-            margin-top: 0;
-            margin: 0;
-            h2 {
-                font-size: 1.3em;
-                padding: .5em 0;
+        padding-left: 9em;
+        div.chat-display {
+            display: inline-block;
+            margin: 8.5em auto 0;
+            border: 2px solid grey;
+            width: 40em;
+            height: 38em;
+            background-color: #fff;
+            ul {
+                height: auto;
+                vertical-align: bottom;
+                list-style-type: none;
+                padding: 1.5em;
+                margin-top: 0;
                 margin: 0;
-            }
-            li {
-                margin: 1em 0;
-            }
-            li.user {
-                background-color: #fafafa;
-                text-align: right;
-                border-radius: .5em;
-                padding: .1em 1em;
-                img {
-                    float: right;
-                }
                 h2 {
-                    vertical-align: bottom;
-                    clear: both;
-                }
-                p {
-                    padding-left: 2em;
+                    font-size: 1.3em;
+                    padding: .5em 0;
                     margin: 0;
-                    padding-top: 2em;
-                    text-align: left;
+                }
+                li {
+                    margin: 1em 0;
+                }
+                li.user {
+                    background-color: #fafafa;
+                    text-align: right;
+                    border-radius: .5em;
+                    padding: .1em 1em;
+                    img {
+                        float: right;
+                    }
+                    h2 {
+                        vertical-align: bottom;
+                        clear: both;
+                    }
+                    p {
+                        padding-left: 2em;
+                        margin: 0;
+                        padding-top: 2em;
+                        text-align: left;
+                    }
+                }
+                li.other {
+                    background-color: #87CEFA;
                 }
             }
-            li.other {
-                background-color: #87CEFA;
+        }
+        form {
+            width: 43.25em;
+            textarea {
+                width: 79.5%;
+                margin-right: -5px;
+                height: 3em;
             }
-        }
-    }
-    form {
-        margin: 2em 0 0 38.4em;
-        width: 43em;
-        textarea {
-            width: 79.5%;
-            margin-right: -5px;
-            height: 3em;
-        }
-        input {
-            width: 5.57em;
-            height: 3.4em;
+            input {
+                width: 5.57em;
+                height: 3.4em;
+            }
         }
     }
 }

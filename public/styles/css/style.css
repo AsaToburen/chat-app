@@ -258,52 +258,54 @@ section.chat {
     display: inline-block;
     margin: 10em 10em 20em 15em;
     vertical-align: top; }
-  section.chat div.chat-display {
+  section.chat div.chat-container {
     display: inline-block;
-    margin: 8.5em auto 0;
-    border: 2px solid grey;
-    width: 40em;
-    height: 38em;
-    background-color: #fff; }
-    section.chat div.chat-display ul {
-      height: auto;
-      vertical-align: bottom;
-      list-style-type: none;
-      padding: 1.5em;
-      margin-top: 0;
-      margin: 0; }
-      section.chat div.chat-display ul h2 {
-        font-size: 1.3em;
-        padding: .5em 0;
+    padding-left: 9em; }
+    section.chat div.chat-container div.chat-display {
+      display: inline-block;
+      margin: 8.5em auto 0;
+      border: 2px solid grey;
+      width: 40em;
+      height: 38em;
+      background-color: #fff; }
+      section.chat div.chat-container div.chat-display ul {
+        height: auto;
+        vertical-align: bottom;
+        list-style-type: none;
+        padding: 1.5em;
+        margin-top: 0;
         margin: 0; }
-      section.chat div.chat-display ul li {
-        margin: 1em 0; }
-      section.chat div.chat-display ul li.user {
-        background-color: #fafafa;
-        text-align: right;
-        border-radius: .5em;
-        padding: .1em 1em; }
-        section.chat div.chat-display ul li.user img {
-          float: right; }
-        section.chat div.chat-display ul li.user h2 {
-          vertical-align: bottom;
-          clear: both; }
-        section.chat div.chat-display ul li.user p {
-          padding-left: 2em;
-          margin: 0;
-          padding-top: 2em;
-          text-align: left; }
-      section.chat div.chat-display ul li.other {
-        background-color: #87CEFA; }
-  section.chat form {
-    margin: 2em 0 0 38.4em;
-    width: 43em; }
-    section.chat form textarea {
-      width: 79.5%;
-      margin-right: -5px;
-      height: 3em; }
-    section.chat form input {
-      width: 5.57em;
-      height: 3.4em; }
+        section.chat div.chat-container div.chat-display ul h2 {
+          font-size: 1.3em;
+          padding: .5em 0;
+          margin: 0; }
+        section.chat div.chat-container div.chat-display ul li {
+          margin: 1em 0; }
+        section.chat div.chat-container div.chat-display ul li.user {
+          background-color: #fafafa;
+          text-align: right;
+          border-radius: .5em;
+          padding: .1em 1em; }
+          section.chat div.chat-container div.chat-display ul li.user img {
+            float: right; }
+          section.chat div.chat-container div.chat-display ul li.user h2 {
+            vertical-align: bottom;
+            clear: both; }
+          section.chat div.chat-container div.chat-display ul li.user p {
+            padding-left: 2em;
+            margin: 0;
+            padding-top: 2em;
+            text-align: left; }
+        section.chat div.chat-container div.chat-display ul li.other {
+          background-color: #87CEFA; }
+    section.chat div.chat-container form {
+      width: 43.25em; }
+      section.chat div.chat-container form textarea {
+        width: 79.5%;
+        margin-right: -5px;
+        height: 3em; }
+      section.chat div.chat-container form input {
+        width: 5.57em;
+        height: 3.4em; }
 
 

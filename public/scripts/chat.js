@@ -118,10 +118,17 @@
 
     });
 
+    function addOtherName() {
+        var aside = document.getElementById('aside');
+        var otherEl = document.createElement('p');
+        var otherTitle = document.createTextNode('You are now chatting with ' + otherData.name);
+        otherEl.appendChild(otherTitle);
+        aside.appendChild(otherEl);
+    }
+
 
     function createMessage(msg, userName, imgUrl) {
 
-        console.log(imgUrl);
         var msgItem = document.createElement('li');
         var msgName = document.createElement('h2');
         var msgText = document.createElement('p');
@@ -139,14 +146,19 @@
         msgItem.appendChild(msgText);
         msgItem.appendChild(msgName);
 
+
+
         if (userName === userData.name) {
             msgItem.className = 'user';
         } else {
             otherData.name = userName;
             msgItem.className = 'other';
+            addOtherName();
         }
 
         messageList.appendChild(msgItem);
+
+        console.log(messageList.childNodes);
     }
 
 })();
