@@ -11,7 +11,7 @@
 
     var userData = {
         name: '',
-        img: ''
+        img: '../images/default-avatar.png'
     };
 
     var otherData = {
@@ -149,6 +149,7 @@
 
 
         if (userName === userData.name) {
+            userName = 'You';
             msgItem.className = 'user';
         } else {
             otherData.name = userName;

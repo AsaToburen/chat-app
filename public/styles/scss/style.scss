@@ -79,21 +79,27 @@ section.chat {
     display: none;
     aside {
         display: inline-block;
-        margin: 10em 10em 20em 15em;
+        margin: 10em 9em 20em 15em;
         vertical-align: top;
     }
     div.chat-container {
         display: inline-block;
-        padding-left: 9em;
         div.chat-display {
             display: inline-block;
-            margin: 8.5em auto 0;
+            margin: 5em auto 0;
             border: 2px solid grey;
-            width: 40em;
-            height: 38em;
+            width: 57em;
+            height: 45em;
             background-color: #fff;
+            overflow: none;
+            position: relative;
             ul {
                 height: auto;
+                overflow: auto;
+                position: absolute;
+                bottom: 0;
+                width: 95%;
+                max-height: 38em;
                 vertical-align: bottom;
                 list-style-type: none;
                 padding: 1.5em;
@@ -101,46 +107,77 @@ section.chat {
                 margin: 0;
                 h2 {
                     font-size: 1.3em;
-                    padding: .5em 0;
+                    padding: .5em 0 0 0;
                     margin: 0;
                 }
                 li {
                     margin: 1em 0;
-                }
-                li.user {
-                    background-color: #fafafa;
-                    text-align: right;
                     border-radius: .5em;
-                    padding: .1em 1em;
                     img {
-                        float: right;
+                        height: 3em;
+                        padding-top: .5em;
+                    }
+                    p {
+                        margin: 0;
+                        display: inline-block;
+                        font-size: 1.7em;
+                        max-width: 72%;
                     }
                     h2 {
                         vertical-align: bottom;
                         clear: both;
                     }
+                }
+                li.user {
+                    background-color: #A9A9A9;
+                    text-align: right;
+                    padding: .1em 1em;
+                    padding: .5em 1.5em .5em 0;
+                    float: right;
+                    clear: both;
+                    img {
+                        float: right;
+                    }
                     p {
-                        padding-left: 2em;
-                        margin: 0;
-                        padding-top: 2em;
                         text-align: left;
+                        padding: 1em 2em 0 2em;
                     }
                 }
-                li.other {
-                    background-color: #87CEFA;
+            }
+            li.other {
+                background-color: #B0C4DE;
+                padding: .5em 0 .5em 1.5em;
+                float: left;
+                clear: both;
+                img {
+                    float: left;
+                }
+                p {
+                    text-align: right;
+                    padding: 1em 2em 0 2em;
                 }
             }
         }
         form {
-            width: 43.25em;
+            margin-top: 2em;
+            margin-right: 0;
             textarea {
-                width: 79.5%;
+                width: 68.5%;
                 margin-right: -5px;
-                height: 3em;
+                height: 3.5em;
+                padding: 1em;
+                margin-left: 1em;
+                font-size: 1.7em;
             }
             input {
                 width: 5.57em;
                 height: 3.4em;
+                margin-left: 2em;
+                margin-top: 1em;
+                background-color: #277650;
+                color: #fff;
+                border-radius: 4px;
+                font-size: 1.5em;
             }
         }
     }
