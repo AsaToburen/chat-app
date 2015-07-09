@@ -62,8 +62,6 @@
 
         userData.name = nameInput.value;
 
-        console.log(userData);
-
         if (userData.name == null || userData.name == '') {
             alert("Please enter a name");
             return false;
@@ -118,6 +116,13 @@
 
     });
 
+    function scrollBottom() {
+        var msgContainer = document.getElementById('display');
+        var scrollPoint = msgContainer.scrollHeight;
+        var msgList = document.getElementById('messages');
+        msgList.scrollTop = scrollPoint;
+    }
+
     function addOtherName() {
         var aside = document.getElementById('aside');
         var otherEl = document.createElement('p');
@@ -157,9 +162,10 @@
             addOtherName();
         }
 
-        messageList.appendChild(msgItem);
 
-        console.log(messageList.childNodes);
+        messageList.appendChild(msgItem);
+        scrollBottom();
+
     }
 
 })();
