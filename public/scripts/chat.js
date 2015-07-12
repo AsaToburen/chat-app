@@ -49,6 +49,7 @@
 
 
     var userInfoForm = document.getElementById('userInfo');
+    var otherNameDisplayed = false;
     var msgForm = document.getElementById('msgForm');
     var messageList = document.getElementById('messages');
 
@@ -124,11 +125,13 @@
     }
 
     function addOtherName() {
+
         var aside = document.getElementById('aside');
         var otherEl = document.createElement('p');
         var otherTitle = document.createTextNode('You are now chatting with ' + otherData.name);
         otherEl.appendChild(otherTitle);
         aside.appendChild(otherEl);
+        otherNameDisplayed = true;
     }
 
 
@@ -159,7 +162,9 @@
         } else {
             otherData.name = userName;
             msgItem.className = 'other';
-            addOtherName();
+            if (!otherNameDisplayed) {
+                addOtherName();
+            }
         }
 
 

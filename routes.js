@@ -23,8 +23,5 @@ module.exports = function(app, io) {
                 img: data.img
             });
         });
-
-
-        //
     });
 };

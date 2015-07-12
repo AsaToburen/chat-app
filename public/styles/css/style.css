@@ -256,7 +256,7 @@ section.chat {
   display: none; }
   section.chat aside {
     display: inline-block;
-    margin: 10em 9em 20em 15em;
+    margin: 10em 9em 0 18em;
     vertical-align: top; }
   section.chat div.chat-container {
     display: inline-block; }
@@ -264,7 +264,7 @@ section.chat {
       display: inline-block;
       margin: 5em auto 0;
       border: 2px solid grey;
-      width: 57em;
+      width: 49em;
       height: 45em;
       background-color: #fff;
       overflow: none;
@@ -325,16 +325,14 @@ section.chat {
       margin-top: 2em;
       margin-right: 0; }
       section.chat div.chat-container form textarea {
-        width: 68.5%;
-        margin-right: -5px;
+        width: 71.5%;
         height: 3.5em;
         padding: 1em;
-        margin-left: 1em;
         font-size: 1.7em; }
       section.chat div.chat-container form input {
         width: 5.57em;
-        height: 3.4em;
-        margin-left: 2em;
+        height: 4.4em;
+        margin-left: 1em;
         margin-top: 1em;
         background-color: #277650;
         color: #fff;
