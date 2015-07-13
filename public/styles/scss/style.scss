@@ -73,13 +73,28 @@ section.login {
     }
 }
 
+section#share {
+    display: none;
+    height: 60em;
+    text-align: center;
+    div.container {
+        background-color: #dedede;
+        margin: 7em auto;
+        width: 60%;
+        border-radius: 10px;
+        padding: 2em;
+        div {
+            margin: 1.5em 0;
+        }
+    }
+}
+
 section.chat {
-    border: 2px solid blue;
     height: 65em;
     display: none;
     aside {
         display: inline-block;
-        margin: 10em 9em 0 18em;
+        margin: 10em 9em 0 14em;
         vertical-align: top;
     }
     div.chat-container {
@@ -89,7 +104,7 @@ section.chat {
             margin: 5em auto 0;
             border: 2px solid grey;
             width: 49em;
-            height: 45em;
+            height: 32em;
             background-color: #fff;
             overflow: none;
             position: relative;

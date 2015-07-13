@@ -49,9 +49,11 @@
 
 
     var userInfoForm = document.getElementById('userInfo');
-    var otherNameDisplayed = false;
     var msgForm = document.getElementById('msgForm');
     var messageList = document.getElementById('messages');
+
+    var otherNameDisplayed = false;
+    var continueToChat = document.getElementById('continue');
 
 
     //get users name and clear input after submitted
@@ -71,13 +73,21 @@
             return false;
         }
 
-        // clear name input and hide the login display
+        // clear name input,  hide the login display, show the url display
 
         nameInput.value = '';
         var loginSection = document.getElementById('login');
-        var chatSection = document.getElementById('chat');
+        var shareSection = document.getElementById('share');
+        shareSection.style.display='block';
         loginSection.style.display = 'none';
-        chatSection.style.display = 'block';
+
+        //grab and display url for sharing with chat participant
+        var urlDisplay = document.getElementById('url-display');
+        var addressEl = document.createElement('h2');
+        var chatUrl = document.createTextNode(window.location.protocol + window.location.host + window.location.pathname);
+        addressEl.appendChild(chatUrl);
+        urlDisplay.appendChild(addressEl);
+
 
         //add the users name to the display
         var aside = document.getElementById('aside');
@@ -86,6 +96,21 @@
         userTitle.appendChild(newName);
         aside.appendChild(userTitle);
     });
+
+    //continue to chat section, hide share Url section
+    
+    continueToChat.addEventListener('click', function(e){
+        e.preventDefault();
+
+        console.log('clicked');
+        var chatSection = document.getElementById('chat');
+        var shareSection = document.getElementById('share');
+        
+        shareSection.style.display = 'none';
+        chatSection.style.display = 'block';
+
+    });
+    
 
     //listen for users submitting a message
 
